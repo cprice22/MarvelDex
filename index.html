@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarvelDex</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "app.js" defer></script>
+</head>
+<body>
+    <!-- Main Container-->
+    <main class = "main">
+
+        <!-- Header -->
+         <header class = "header home">
+            <div class = "container">
+                <!-- Logo -->
+                <div class = "logo-wrapper">
+                    <img src = "/assets/marvelLogo.png" alt = "MarvelLogo">
+                    <!-- <h1>MarvelDex</h1> -->
+                </div>
+                <!-- Search Bar-->
+                <div class = "search-wrapper">
+                    <div class = "search-wrap">
+                        <img
+                            src = "./assets/search.svg"
+                            alt = "searchIcon"
+                            class = "search-icon"
+                        />
+                        <input
+                            type = "text"
+                            class = "search-input body3-fonts"
+                            placeholder = "Search"
+                            id = "search-input"
+                        />
+                        <img
+                            src = "/assets/cross.svg"
+                            alt = "cross icon"
+                            class = "search-close-icon"
+                            id = "search-close-icon"
+                        />
+                    </div>
+                </div>
+                <!-- Favorites-->
+                 <nav class = "tabs">
+                    <button id = "all-tab" class = "tab active">All Heroes</button>
+                    <button id = "favorites-tab" class = "tab">Favorites</button>
+                 </nav>
+            </div>
+         </header>
+
+
+         <!-- List Of Charcters-->
+         <section class = "character-list">
+            <div class = "container">
+
+                <!-- All Heroes -->
+                <div id = "all-heroes" class = "list-wrapper"></div>
+
+                <!-- Favorites -->
+                <div id = "favorites" class = "list-wrapper" style = "display: none;"></div>
+
+            </div>
+            <div id = "not-found-message">Chracter Not Found</div>
+         </section>
+
+         <!-- Character Detail Modal (Popup Window For Characters)-->
+          <div id = "character-modal" class = "modal">
+            <!-- Inside Box With Details-->
+            <div class = "modal-content">
+                <!-- X Button To Close-->
+                <span id = "modal-close" class = "modal-close">&times;</span>
+                <!-- Where JavaScript WIll Inject Character Details-->
+                <div id = "modal-body"></div>
+            </div>
+          </div>
+
+    </main>
+
+</body>
+</html>
